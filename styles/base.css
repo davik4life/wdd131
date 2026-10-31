@@ -1,0 +1,276 @@
+/* CSS Stylesheet for WDD 131 - Victor Adeshile */
+
+:root {
+    --primary-color: #1b4965;
+    --primary-dark: #0f2e42;
+    --nav-bg: #133b54;
+    --nav-hover: #0a202f;
+    --card-border: #b8c4ce;
+    --card-header-bg: #1b4965;
+    --text-color: #2b2b2b;
+    --heading-color: #1a1a1a;
+    --accent-color: #fff275;
+    --link-color: #0b5394;
+    --link-hover: #042e54;
+    --bg-light: #ffffff;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.25rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.85rem 1.5rem;
+    display: block;
+    text-align: center;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--nav-hover);
+    color: var(--accent-color);
+}
+
+/* Main Layout */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--heading-color);
+    margin: 0.5rem 0 1rem;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    background-color: var(--card-header-bg);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.65rem 1rem;
+}
+
+.card-content {
+    padding: 1.25rem;
+    flex: 1;
+}
+
+/* Card 1: About Me layout */
+.about-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-top p {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.profile-img {
+    width: 130px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #c8d3dc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Sub-heading divider */
+.country-section {
+    border-top: 1px solid #d5dce2;
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.country-section h3 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.country-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.flag-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.flag-img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccd5dc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.flag-caption {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #4a5560;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+.country-body p {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Card 2: Web Dev Resources */
+.resources-list {
+    list-style-type: disc;
+    padding-left: 1.75rem;
+    margin-top: 1rem;
+}
+
+.resources-list li {
+    margin-bottom: 0.8rem;
+}
+
+.resources-list a {
+    color: var(--link-color);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.resources-list a:hover,
+.resources-list a:focus {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    margin-top: auto;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0.35rem 0;
+}
+
+#lastModified {
+    color: var(--accent-color);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .about-top,
+    .country-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+    }
+
+    .flag-box {
+        width: 160px;
+    }
+}
