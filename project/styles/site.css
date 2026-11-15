@@ -209,7 +209,7 @@ h3 {
 }
 
 .hero-art {
-    padding: 0.65rem;
+    overflow: hidden;
     border-radius: 1rem;
     background: var(--sage);
 }
@@ -222,8 +222,8 @@ h3 {
 }
 
 .hero-art img {
-    max-height: 24rem;
-    object-fit: contain;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 .button-row {
