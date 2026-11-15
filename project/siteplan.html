@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website plan for Compost Made Simple, a beginner-friendly home composting guide.">
+    <meta name="author" content="Victor Adeshile">
+    <title>Website Plan | Compost Made Simple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="31" fill="#FAF7EF"/>
+                <path d="M32 48V29m0 8c-9 0-15-5-16-14 9 0 15 5 16 14Z" fill="#2F5D3A"/>
+                <path d="M32 31c0-9 6-15 16-16 0 10-6 16-16 16Z" fill="#A84F1F"/>
+                <path d="M23 49h18" stroke="#24301F" stroke-linecap="round" stroke-width="3"/>
+            </svg>
+            <div>
+                <p class="eyebrow">Website planning document</p>
+                <h1>Compost Made Simple</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <p class="intro">A practical, beginner-friendly plan for a small website that helps people turn everyday food scraps into useful compost.</p>
+
+        <section aria-labelledby="site-name-heading">
+            <h2 id="site-name-heading">Site Name</h2>
+            <p><strong>Compost Made Simple</strong> tells new composters exactly what the site offers: clear, approachable help without requiring prior gardening experience. The sprout logo represents food scraps becoming healthy soil.</p>
+            <p class="domain-note">Possible domain: <code>compostmadesimple.org</code> (availability not checked)</p>
+        </section>
+
+        <section aria-labelledby="purpose-heading">
+            <h2 id="purpose-heading">Site Purpose</h2>
+            <p>The site will help households start and maintain a home compost system. It will explain how to choose a bin, balance “greens” and “browns,” and use finished compost. A troubleshooting guide and question form will help visitors solve common problems such as odors, pests, and slow decomposition.</p>
+        </section>
+
+        <section aria-labelledby="scenarios-heading">
+            <h2 id="scenarios-heading">Scenarios</h2>
+            <ul class="scenario-list">
+                <li>What food scraps can I put in a beginner compost bin?</li>
+                <li>How do I balance green materials with dry brown materials?</li>
+                <li>Which compost bin will work in a small apartment or yard?</li>
+                <li>Why does my compost smell bad, and how can I fix it?</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="pages-heading">
+            <h2 id="pages-heading">Planned Pages and Content</h2>
+            <div class="page-list">
+                <article class="page-card">
+                    <h3>Home</h3>
+                    <p>A short introduction, a three-step overview, and links to the starter guide and troubleshooting advice.</p>
+                </article>
+                <article class="page-card">
+                    <h3>Getting Started</h3>
+                    <p>Bin options, a green-and-brown materials guide, and a simple routine for adding and turning compost.</p>
+                </article>
+                <article class="page-card">
+                    <h3>Troubleshooting</h3>
+                    <p>Common symptoms with practical fixes, plus a form for visitors to submit a composting question.</p>
+                </article>
+            </div>
+            <p class="form-plan"><strong>Planned form:</strong> The Troubleshooting page will include labeled name, email, topic, and question fields. Required fields, email input validation, clear instructions, and a confirmation message will support usability and accessibility.</p>
+        </section>
+
+        <section aria-labelledby="colors-heading">
+            <h2 id="colors-heading">Color Schema</h2>
+            <p>The palette uses soil and plant colors to make the guide feel natural, calm, and easy to scan.</p>
+            <ul class="color-list">
+                <li class="color-card">
+                    <span class="color-swatch forest" aria-hidden="true"></span>
+                    <span><strong>Forest green</strong><code>#2F5D3A</code><small>Header, footer, and section headings</small></span>
+                </li>
+                <li class="color-card">
+                    <span class="color-swatch cream" aria-hidden="true"></span>
+                    <span><strong>Warm cream</strong><code>#FAF7EF</code><small>Page background and open content areas</small></span>
+                </li>
+                <li class="color-card">
+                    <span class="color-swatch clay" aria-hidden="true"></span>
+                    <span><strong>Terracotta</strong><code>#A84F1F</code><small>Buttons, links, and small highlights</small></span>
+                </li>
+                <li class="color-card">
+                    <span class="color-swatch charcoal" aria-hidden="true"></span>
+                    <span><strong>Soil charcoal</strong><code>#24301F</code><small>Body text for strong contrast</small></span>
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="type-heading">
+            <h2 id="type-heading">Typography</h2>
+            <div class="type-samples">
+                <article class="type-card">
+                    <h3 class="sample-heading">Merriweather</h3>
+                    <p><strong>Use:</strong> Page titles and section headings.</p>
+                    <p class="heading-example">Good soil starts here.</p>
+                </article>
+                <article class="type-card">
+                    <h3 class="sample-body">DM Sans</h3>
+                    <p><strong>Use:</strong> Paragraphs, navigation, form labels, and buttons.</p>
+                    <p class="body-example">Clear steps make composting easier to begin and maintain.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="functionality-heading">
+            <h2 id="functionality-heading">Accessibility and Functionality</h2>
+            <ul class="scenario-list">
+                <li>Responsive layouts will stack on narrow screens and use wider grids on desktop.</li>
+                <li>Semantic headings, labeled form fields, keyboard-friendly controls, and visible focus styles will support accessible use.</li>
+                <li>JavaScript will use an array of compost materials to filter items into greens and browns, with conditional guidance based on the visitor’s choices.</li>
+                <li>The form will provide clear validation and a confirmation message. Local storage will remember the visitor’s preferred compost setup on the device.</li>
+                <li>Content images will be compressed and use descriptive alternative text and native lazy loading.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="wireframes-heading">
+            <h2 id="wireframes-heading">Home Page Wireframes</h2>
+            <p>These diagrams show the planned content order and layout relationships. Labels represent content areas rather than final copy.</p>
+
+            <div class="wireframe-grid">
+                <figure class="wireframe-frame">
+                    <figcaption>Mobile view</figcaption>
+                    <div class="wireframe-page wireframe-mobile" aria-label="Mobile home page wireframe">
+                        <div class="wf-header"><span class="wf-logo">Sprout</span><strong>Compost Made Simple</strong><span class="wf-menu">Menu</span></div>
+                        <div class="wf-hero"><strong>Hero photo</strong><span>Welcome and short introduction</span><span class="wf-button">Start composting</span></div>
+                        <div class="wf-block"><strong>Three quick-start steps</strong><span>Choose a bin · Add scraps · Keep balance</span></div>
+                        <div class="wf-block wf-pair"><span>Greens guide</span><span>Browns guide</span></div>
+                        <div class="wf-block"><strong>Common problems</strong><span>Quick tips and link to troubleshooting</span></div>
+                        <div class="wf-form">Email form and submit button</div>
+                        <div class="wf-footer">Footer links and contact</div>
+                    </div>
+                </figure>
+
+                <figure class="wireframe-frame">
+                    <figcaption>Desktop / wider view</figcaption>
+                    <div class="wireframe-page wireframe-desktop" aria-label="Desktop home page wireframe">
+                        <div class="wf-header"><span class="wf-logo">Sprout</span><strong>Compost Made Simple</strong><span class="wf-nav">Home　 Getting Started　 Troubleshooting</span></div>
+                        <div class="wf-hero"><strong>Welcome and short introduction</strong><span>Hero image and primary call to action</span><span class="wf-button">Start composting</span></div>
+                        <div class="wf-aside">Quick fact or compost success tip</div>
+                        <div class="wf-block wf-steps"><strong>Three quick-start steps</strong><span>Three cards in a row</span></div>
+                        <div class="wf-block wf-pair"><span>Greens guide</span><span>Browns guide</span></div>
+                        <div class="wf-form">Email form and submit button</div>
+                        <div class="wf-footer">Footer links and contact</div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Website plan · Compost Made Simple · Victor Adeshile</p>
+    </footer>
+</body>
+</html>
