@@ -1,0 +1,39 @@
+@media (min-width: 42rem) {
+    .header-top {
+        justify-content: center;
+        padding: 1.1rem 1.5rem 0.75rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    nav,
+    nav.is-open {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.25rem;
+        border-top: 1px solid rgb(255 255 255 / 15%);
+    }
+
+    nav a {
+        min-width: 5.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    main {
+        margin-top: 2rem;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    .temple-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

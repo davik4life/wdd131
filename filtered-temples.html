@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse temple photos and filter temples by age, size, or location.">
+    <meta name="author" content="Victor Adeshile">
+    <title>Filtered Temple Album | Victor Adeshile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a class="site-title" href="filtered-temples.html">Temple Album</a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+        <nav id="primary-navigation" aria-label="Main navigation">
+            <a href="#gallery" data-filter="home" aria-current="page">Home</a>
+            <a href="#gallery" data-filter="old">Old</a>
+            <a href="#gallery" data-filter="new">New</a>
+            <a href="#gallery" data-filter="large">Large</a>
+            <a href="#gallery" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main id="gallery">
+        <h1>Temples of the World</h1>
+        <p id="gallery-status" class="gallery-status" aria-live="polite"></p>
+        <div class="temple-grid" id="temple-grid" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🎻 Victor Adeshile 🎻 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
