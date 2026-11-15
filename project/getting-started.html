@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare home compost bin options and learn which green and brown materials are suitable for composting.">
+    <meta name="author" content="Victor Adeshile">
+    <title>Getting Started | Compost Made Simple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="scripts/site.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+                    <circle cx="32" cy="32" r="31" fill="#FAF7EF"/>
+                    <path d="M32 48V29m0 8c-9 0-15-5-16-14 9 0 15 5 16 14Z" fill="#2F5D3A"/>
+                    <path d="M32 31c0-9 6-15 16-16 0 10-6 16-16 16Z" fill="#A84F1F"/>
+                    <path d="M23 49h18" stroke="#24301F" stroke-linecap="round" stroke-width="3"/>
+                </svg>
+                <span>Compost Made Simple</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="getting-started.html" aria-current="page">Getting Started</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-intro container">
+            <p class="eyebrow">Getting started</p>
+            <h1>Build a routine that fits your space.</h1>
+            <p>Compost systems can be as small as a kitchen caddy or as roomy as an outdoor pile. Start with a manageable setup, then add materials in layers.</p>
+        </section>
+
+        <section class="content-section container" aria-labelledby="bin-options-heading">
+            <h2 id="bin-options-heading">Choose a compost setup</h2>
+            <p class="section-intro">The best setup is one you can maintain. Check local rules before starting a shared or community compost system.</p>
+            <div class="bin-grid">
+                <article class="bin-card">
+                    <h3>Apartment caddy</h3>
+                    <p>Collect scraps in a small, covered container and empty it regularly into a community compost drop-off. It is convenient, but does not finish compost on its own.</p>
+                    <ul>
+                        <li>Best for: kitchens and shared buildings</li>
+                        <li>Needs: a nearby collection point</li>
+                    </ul>
+                </article>
+                <article class="bin-card">
+                    <h3>Outdoor tumbler</h3>
+                    <p>A closed rotating bin keeps materials contained and makes mixing easy. Add dry browns with food scraps to balance moisture and reduce odors.</p>
+                    <ul>
+                        <li>Best for: patios and small yards</li>
+                        <li>Needs: room to turn and unload it</li>
+                    </ul>
+                </article>
+                <article class="bin-card">
+                    <h3>Open pile or bin</h3>
+                    <p>An open pile or slatted bin can handle more leaves and garden trimmings. It needs space and occasional turning to maintain airflow.</p>
+                    <ul>
+                        <li>Best for: gardens with yard waste</li>
+                        <li>Needs: a level, well-drained spot</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="form-panel">
+                <h2>Save the setup that suits you</h2>
+                <p>Your selection is stored only in this browser, so the home page can remind you of your preferred setup.</p>
+                <form class="preference-form" id="setup-form" action="getting-started.html" method="get">
+                    <div>
+                        <label for="bin-choice">My compost setup</label>
+                        <select id="bin-choice" name="binChoice" required>
+                            <option value="" disabled selected>Choose a setup ...</option>
+                            <option value="apartment">Apartment caddy and community drop-off</option>
+                            <option value="tumbler">Outdoor tumbler</option>
+                            <option value="openPile">Open pile or bin</option>
+                        </select>
+                    </div>
+                    <button class="form-button" type="submit">Save my setup</button>
+                </form>
+                <p class="form-status" id="setup-confirmation" role="status" aria-live="polite" hidden></p>
+            </div>
+        </section>
+
+        <section class="content-section soft-section" id="choose-materials">
+            <div class="container">
+                <p class="eyebrow">What to add</p>
+                <h2>Balance greens with browns</h2>
+                <p class="section-intro">Greens are moist, nitrogen-rich ingredients. Browns are dry, carbon-rich ingredients that help create structure. A useful starting point is about two parts browns to one part greens by volume.</p>
+                <div class="material-illustrations">
+                    <figure class="material-illustration">
+                        <img src="images/greens.svg" alt="Illustration of fresh green leaves and plant scraps." width="640" height="400" loading="lazy" decoding="async">
+                        <figcaption>Greens: fresh scraps and plant trimmings</figcaption>
+                    </figure>
+                    <figure class="material-illustration">
+                        <img src="images/browns.svg" alt="Illustration of dry leaves, straw, and shredded cardboard." width="640" height="400" loading="lazy" decoding="async">
+                        <figcaption>Browns: dry leaves and plain paper products</figcaption>
+                    </figure>
+                </div>
+
+                <div id="materials">
+                    <h3>Find a material</h3>
+                    <div class="filter-controls" role="group" aria-label="Filter materials by type">
+                        <button class="filter-button" type="button" data-material-filter="all" aria-pressed="true">All materials</button>
+                        <button class="filter-button" type="button" data-material-filter="greens" aria-pressed="false">Greens</button>
+                        <button class="filter-button" type="button" data-material-filter="browns" aria-pressed="false">Browns</button>
+                    </div>
+                    <p class="material-count" id="material-count" aria-live="polite"></p>
+                    <div class="material-grid" id="material-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section container">
+            <h2>Keep the pile working</h2>
+            <div class="two-column">
+                <article class="content-card">
+                    <h3>Check moisture</h3>
+                    <p>The pile should feel damp, like a wrung-out sponge. Add dry browns if it is soggy; sprinkle in water if the material is dusty and dry.</p>
+                </article>
+                <article class="content-card">
+                    <h3>Give it air</h3>
+                    <p>Turn or fluff compacted material from time to time. Chopping scraps into smaller pieces can also help them break down more evenly.</p>
+                </article>
+            </div>
+            <div class="callout">
+                <p><strong>Leave these out of a typical backyard pile:</strong> meat, dairy, fats and oils, pet waste, and diseased plants. Follow your local compost program’s rules for accepted materials.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Compost Made Simple · A home composting guide for beginners</p>
+        <p>&copy; <span id="current-year"></span> Victor Adeshile · Nigeria</p>
+        <p id="last-modified"></p>
+        <p><a href="index.html">Home</a> · <a href="troubleshooting.html">Troubleshooting</a></p>
+    </footer>
+</body>
+</html>

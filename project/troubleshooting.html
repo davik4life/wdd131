@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fix common home compost problems, including odors, pests, excess moisture, and slow decomposition.">
+    <meta name="author" content="Victor Adeshile">
+    <title>Troubleshooting | Compost Made Simple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="scripts/site.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+                    <circle cx="32" cy="32" r="31" fill="#FAF7EF"/>
+                    <path d="M32 48V29m0 8c-9 0-15-5-16-14 9 0 15 5 16 14Z" fill="#2F5D3A"/>
+                    <path d="M32 31c0-9 6-15 16-16 0 10-6 16-16 16Z" fill="#A84F1F"/>
+                    <path d="M23 49h18" stroke="#24301F" stroke-linecap="round" stroke-width="3"/>
+                </svg>
+                <span>Compost Made Simple</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="troubleshooting.html" aria-current="page">Troubleshooting</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-intro container">
+            <p class="eyebrow">Troubleshooting</p>
+            <h1>Small changes can bring a compost pile back into balance.</h1>
+            <p>Compost changes with the weather and the materials you add. Open a symptom below for a practical first adjustment.</p>
+        </section>
+
+        <section class="content-section container" aria-labelledby="problems-heading">
+            <h2 id="problems-heading">Common compost problems</h2>
+            <div class="problem-grid">
+                <article class="problem-card">
+                    <details>
+                        <summary>The pile smells sour or rotten</summary>
+                        <p>Too much moisture or too little air is a common cause. Mix in dry leaves or torn cardboard, then loosen compacted layers. Bury new food scraps in the center.</p>
+                    </details>
+                </article>
+                <article class="problem-card">
+                    <details>
+                        <summary>Flies or other pests are visiting</summary>
+                        <p>Cover exposed food scraps with a layer of browns and keep the lid closed. Avoid meat, dairy, oils, and pet waste in a typical backyard bin.</p>
+                    </details>
+                </article>
+                <article class="problem-card">
+                    <details>
+                        <summary>The material is very dry</summary>
+                        <p>Add a little water while mixing until the material feels like a wrung-out sponge. Include fresh greens in small amounts and check again after a few days.</p>
+                    </details>
+                </article>
+                <article class="problem-card">
+                    <details>
+                        <summary>Nothing seems to be breaking down</summary>
+                        <p>Small pieces decompose faster than large ones. Chop scraps, check that the pile is slightly damp, and add some greens if the mix is mostly dry leaves or cardboard.</p>
+                    </details>
+                </article>
+            </div>
+            <div class="callout">
+                <p><strong>Safety note:</strong> If you are unsure whether a material is safe for your compost setup, leave it out and check the guidance from your local compost program.</p>
+            </div>
+        </section>
+
+        <section class="content-section soft-section" id="ask-question">
+            <div class="container">
+                <div class="form-panel">
+                    <p class="eyebrow">Ask a question</p>
+                    <h2>What is happening with your compost?</h2>
+                    <p>Describe the issue and choose a topic. This static-site demonstration validates your form and shows a local confirmation; it does not send your details to a server.</p>
+                    <form class="question-form" id="question-form" action="troubleshooting.html" method="get">
+                        <div>
+                            <label for="visitor-name">Your name</label>
+                            <input id="visitor-name" name="visitorName" type="text" autocomplete="name" maxlength="80" required>
+                        </div>
+                        <div>
+                            <label for="visitor-email">Email address</label>
+                            <input id="visitor-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+                        </div>
+                        <div>
+                            <label for="question-topic">Question topic</label>
+                            <select id="question-topic" name="topic" required>
+                                <option value="" disabled selected>Choose a topic ...</option>
+                                <option value="odor">Odor</option>
+                                <option value="pests">Pests</option>
+                                <option value="moisture">Moisture</option>
+                                <option value="slow breakdown">Slow breakdown</option>
+                                <option value="materials">Accepted materials</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="question-details">Your question</label>
+                            <textarea id="question-details" name="question" rows="5" minlength="10" maxlength="1200" required></textarea>
+                        </div>
+                        <button class="form-button" type="submit">Check my question</button>
+                    </form>
+                    <p class="form-note">Your name, email, and question are not stored. Only the number of demo submissions is kept in this browser.</p>
+                    <p class="form-status" id="question-confirmation" role="status" aria-live="polite" hidden></p>
+                    <p class="form-note">Demo submissions on this device: <strong id="question-count">0</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Compost Made Simple · A home composting guide for beginners</p>
+        <p>&copy; <span id="current-year"></span> Victor Adeshile · Nigeria</p>
+        <p id="last-modified"></p>
+        <p><a href="index.html">Home</a> · <a href="getting-started.html">Getting Started</a></p>
+    </footer>
+</body>
+</html>

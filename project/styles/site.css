@@ -1,0 +1,605 @@
+:root {
+    color-scheme: light;
+    --forest: #2f5d3a;
+    --forest-dark: #21472c;
+    --cream: #faf7ef;
+    --clay: #a84f1f;
+    --charcoal: #24301f;
+    --sage: #dce8d8;
+    --line: #ded8cb;
+    --surface: #ffffff;
+    --muted: #52604d;
+    --heading-font: "Merriweather", Georgia, serif;
+    --body-font: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--charcoal);
+    background: var(--cream);
+    font-family: var(--body-font);
+    line-height: 1.65;
+}
+
+a {
+    color: var(--forest-dark);
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    color: var(--clay);
+}
+
+:focus-visible {
+    outline: 3px solid var(--clay);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 5;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.6rem 0.85rem;
+    transform: translateY(-160%);
+    color: #ffffff;
+    background: var(--forest-dark);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.site-header {
+    color: #ffffff;
+    background: var(--forest);
+}
+
+.header-inner,
+.container {
+    width: min(calc(100% - 2rem), 72rem);
+    margin-inline: auto;
+}
+
+.header-inner {
+    display: flex;
+    min-height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #ffffff;
+    font-family: var(--heading-font);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: #ffffff;
+}
+
+.brand-logo {
+    width: 2.8rem;
+    height: 2.8rem;
+    flex: 0 0 auto;
+}
+
+.menu-toggle {
+    display: inline-grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border: 1px solid rgb(255 255 255 / 55%);
+    border-radius: 0.4rem;
+    color: #ffffff;
+    background: transparent;
+    font: 1.5rem/1 var(--body-font);
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    color: var(--forest-dark);
+    background: var(--cream);
+}
+
+.site-nav {
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+.site-nav.is-open {
+    display: flex;
+}
+
+.site-nav a {
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+    color: var(--forest-dark);
+    background: var(--sage);
+}
+
+main {
+    flex: 1;
+}
+
+.hero {
+    display: grid;
+    width: min(calc(100% - 2rem), 72rem);
+    margin-inline: auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding-block: 2rem 2.5rem;
+}
+
+.hero-copy {
+    max-width: 42rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.55rem;
+    color: var(--clay);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    margin-bottom: 0.9rem;
+    color: var(--forest-dark);
+    font-family: var(--heading-font);
+    font-size: clamp(2rem, 7vw, 3.3rem);
+}
+
+h2 {
+    color: var(--forest-dark);
+    font-family: var(--heading-font);
+    font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+h3 {
+    color: var(--forest-dark);
+    font-size: 1.15rem;
+}
+
+.hero-copy > p:not(.eyebrow) {
+    max-width: 62ch;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.hero-art {
+    padding: 0.65rem;
+    border-radius: 1rem;
+    background: var(--sage);
+}
+
+.hero-art img,
+.material-illustration img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-art img {
+    max-height: 24rem;
+    object-fit: contain;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+}
+
+.button,
+.button-secondary,
+.filter-button,
+.form-button {
+    display: inline-flex;
+    min-height: 2.8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border: 2px solid var(--forest);
+    border-radius: 0.35rem;
+    font: 700 0.95rem var(--body-font);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button,
+.form-button {
+    color: #ffffff;
+    background: var(--forest);
+}
+
+.button:hover,
+.form-button:hover {
+    color: #ffffff;
+    background: var(--forest-dark);
+}
+
+.button-secondary {
+    color: var(--forest-dark);
+    background: transparent;
+}
+
+.button-secondary:hover {
+    color: #ffffff;
+    background: var(--forest-dark);
+}
+
+.saved-setup {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-left: 0.3rem solid var(--clay);
+    background: var(--surface);
+}
+
+.content-section {
+    padding-block: 2.5rem;
+}
+
+.section-intro {
+    max-width: 68ch;
+    color: var(--muted);
+}
+
+.soft-section {
+    background: var(--sage);
+}
+
+.step-grid,
+.bin-grid,
+.material-grid,
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.content-card,
+.step-card,
+.bin-card,
+.material-card,
+.problem-card,
+.form-panel,
+.callout {
+    padding: 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.55rem;
+    background: var(--surface);
+}
+
+.step-card {
+    border-top: 0.3rem solid var(--clay);
+}
+
+.step-number {
+    display: inline-grid;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-bottom: 0.8rem;
+    place-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: var(--forest);
+    font-weight: 700;
+}
+
+.step-card p,
+.content-card p,
+.bin-card p,
+.material-card p,
+.problem-card p {
+    margin-bottom: 0;
+}
+
+.two-column,
+.material-illustrations {
+    display: grid;
+    gap: 1rem;
+}
+
+.material-illustration {
+    overflow: hidden;
+    border-radius: 0.55rem;
+    background: var(--sage);
+}
+
+.material-illustration img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.material-illustration figcaption {
+    padding: 0.75rem 1rem;
+    color: var(--forest-dark);
+    font-weight: 700;
+}
+
+.callout {
+    margin-top: 1.25rem;
+    border-left: 0.35rem solid var(--clay);
+}
+
+.callout p:last-child {
+    margin-bottom: 0;
+}
+
+.page-intro {
+    padding-block: 2rem 1.25rem;
+}
+
+.page-intro p {
+    max-width: 70ch;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.preference-form,
+.question-form {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.preference-form {
+    grid-template-columns: 1fr;
+    align-items: end;
+}
+
+.form-panel {
+    margin-block: 1.5rem;
+    border-top: 0.3rem solid var(--forest);
+}
+
+.form-panel h2 {
+    margin-bottom: 0.5rem;
+}
+
+.form-panel > p {
+    color: var(--muted);
+}
+
+.question-form label,
+.preference-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.question-form input,
+.question-form select,
+.question-form textarea,
+.preference-form select {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #8a9385;
+    border-radius: 0.3rem;
+    color: var(--charcoal);
+    background: #ffffff;
+    font: inherit;
+}
+
+.question-form textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.question-form :focus-visible,
+.preference-form :focus-visible,
+.filter-button:focus-visible {
+    outline: 3px solid var(--clay);
+    outline-offset: 2px;
+}
+
+.question-form .form-button,
+.preference-form .form-button {
+    justify-self: start;
+}
+
+.form-note,
+.form-status {
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+}
+
+.form-status {
+    padding: 0.8rem;
+    border-left: 0.3rem solid var(--forest);
+    background: var(--sage);
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block: 1rem 0.5rem;
+}
+
+.filter-button {
+    min-height: 2.4rem;
+    padding: 0.45rem 0.8rem;
+    border-width: 1px;
+    color: var(--forest-dark);
+    background: #ffffff;
+}
+
+.filter-button[aria-pressed="true"],
+.filter-button:hover {
+    color: #ffffff;
+    background: var(--forest);
+}
+
+.material-count {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.material-card {
+    border-top: 0.25rem solid var(--forest);
+}
+
+.material-card--browns {
+    border-top-color: var(--clay);
+}
+
+.material-category {
+    margin-bottom: 0.45rem;
+    color: var(--clay);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.bin-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.bin-card ul,
+.content-card ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+.problem-card details {
+    padding-block: 0.2rem;
+}
+
+.problem-card summary {
+    color: var(--forest-dark);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.problem-card details p {
+    margin-top: 0.7rem;
+}
+
+.site-footer {
+    margin-top: auto;
+    padding: 1.4rem 1rem;
+    color: #ffffff;
+    background: var(--forest-dark);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+.site-footer a:hover {
+    color: #f3c86a;
+}
+
+@media (min-width: 44rem) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-nav,
+    .site-nav.is-open {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.25rem;
+        border-top: 1px solid rgb(255 255 255 / 20%);
+    }
+
+    .site-nav a {
+        padding: 0.75rem 1.1rem;
+    }
+
+    .hero {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 2.5rem;
+        padding-block: 3.5rem;
+    }
+
+    .step-grid,
+    .bin-grid,
+    .material-grid,
+    .problem-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .two-column,
+    .material-illustrations {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .preference-form {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+}
+
+@media (min-width: 68rem) {
+    .step-grid,
+    .bin-grid,
+    .material-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .problem-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
