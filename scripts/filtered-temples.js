@@ -61,7 +61,7 @@ const temples = [
         dedicated: "1893, April, 6",
         area: 253015,
         yearBuilt: 1893,
-        imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Salt_Lake_Temple%2C_Utah_-_Sept_2004.jpg/960px-Salt_Lake_Temple%2C_Utah_-_Sept_2004.jpg"
+        imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Salt_Lake_Temple%2C_Utah_-_Sept_2004.jpg/500px-Salt_Lake_Temple%2C_Utah_-_Sept_2004.jpg"
     },
     {
         templeName: "Laie Hawaii Temple",
@@ -69,7 +69,7 @@ const temples = [
         dedicated: "1919, November, 27",
         area: 42336,
         yearBuilt: 1919,
-        imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/LDS_Laie_Hawaii_Temple_front_view.jpg/960px-LDS_Laie_Hawaii_Temple_front_view.jpg"
+        imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/LDS_Laie_Hawaii_Temple_front_view.jpg/500px-LDS_Laie_Hawaii_Temple_front_view.jpg"
     },
     {
         templeName: "Accra Ghana Temple",
