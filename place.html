@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Lagos, Nigeria, with city facts and a snapshot of its warm, partly cloudy weather.">
+    <meta name="author" content="Victor Adeshile">
+    <title>Lagos, Nigeria | Victor Adeshile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Lagos, Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture class="hero-picture">
+                <source media="(max-width: 700px)" srcset="images/lagos-mobile.webp" type="image/webp">
+                <img src="images/lagos-wide.webp" alt="An urban view of Lagos, Nigeria." width="1920" height="1015">
+            </picture>
+
+            <section class="info-card data-card" aria-labelledby="data-heading">
+                <h2 id="data-heading">Data</h2>
+                <dl>
+                    <dt>Country</dt><dd>Nigeria</dd>
+                    <dt>Region</dt><dd>West Africa</dd>
+                    <dt>Capital</dt><dd>Abuja</dd>
+                    <dt>Population</dt><dd>Over 230 million</dd>
+                    <dt>Area</dt><dd>923,768 km²</dd>
+                    <dt>Currency</dt><dd>Nigerian naira (NGN)</dd>
+                </dl>
+            </section>
+
+            <section class="info-card weather-card" aria-labelledby="weather-heading">
+                <h2 id="weather-heading" class="weather-heading">
+                    Weather
+                    <span class="mobile-weather-icon">
+                        <img src="images/partly-cloudy.svg" alt="" width="56" height="56">
+                    </span>
+                </h2>
+                <dl>
+                    <dt>Conditions</dt><dd>Partly cloudy</dd>
+                    <dt>Temperature</dt><dd><span id="temperature">31</span> °C</dd>
+                    <dt>Wind speed</dt><dd><span id="wind-speed">12</span> km/h</dd>
+                    <dt>Wind chill</dt><dd id="wind-chill">N/A</dd>
+                </dl>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Victor Adeshile | Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+        <p class="photo-credit">
+            Photos:
+            <a href="https://commons.wikimedia.org/wiki/File:Lagos_skyline.jpg">Lagos skyline by Clara Sanchiz (CC BY-SA 2.0)</a>
+            and
+            <a href="https://commons.wikimedia.org/wiki/File:2008_Lagos_Lagos_Nigeria_2363479089.jpg">Lagos city by Robert Prather (CC BY 2.0)</a>.
+        </p>
+    </footer>
+</body>
+</html>
