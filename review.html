@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review submission confirmation.">
+    <meta name="author" content="Victor Adeshile">
+    <title>Review Submitted | Victor Adeshile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/product-review.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Review Submitted</h1>
+    </header>
+
+    <main>
+        <section class="confirmation-card" aria-labelledby="confirmation-heading">
+            <h2 id="confirmation-heading">Thank you for your feedback</h2>
+            <p id="confirmation-message" role="status">Checking your submission ...</p>
+            <div id="review-details" class="review-details" hidden>
+                <p><strong>Product:</strong> <span id="confirmed-product"></span></p>
+                <p><strong>Rating:</strong> <span id="confirmed-rating"></span></p>
+                <p><strong>Installation date:</strong> <span id="confirmed-date"></span></p>
+                <div id="confirmed-features-wrap" hidden>
+                    <strong>Useful features:</strong>
+                    <ul id="confirmed-features"></ul>
+                </div>
+                <blockquote id="confirmed-review-wrap" hidden>
+                    <p id="confirmed-review"></p>
+                </blockquote>
+            </div>
+            <p class="review-count">Reviews submitted on this device: <strong id="review-count">0</strong></p>
+            <a class="return-link" href="form.html">Write another review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🎻 Victor Adeshile 🎻 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
