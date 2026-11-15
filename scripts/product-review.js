@@ -8,7 +8,6 @@ const products = [
 
 const productSelect = document.getElementById("product");
 const reviewForm = document.querySelector(".review-form");
-const submissionIdField = document.getElementById("submission-id");
 
 products.forEach((product) => {
     const option = document.createElement("option");
@@ -17,9 +16,16 @@ products.forEach((product) => {
     productSelect.append(option);
 });
 
-reviewForm.addEventListener("submit", () => {
+reviewForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
     const submissionId = typeof crypto.randomUUID === "function"
         ? crypto.randomUUID()
         : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-    submissionIdField.value = submissionId;
+    const formData = new FormData(reviewForm);
+    formData.set("submissionId", submissionId);
+
+    const confirmationUrl = new URL(reviewForm.action);
+    confirmationUrl.search = new URLSearchParams(formData).toString();
+    window.location.assign(confirmationUrl.href);
 });
